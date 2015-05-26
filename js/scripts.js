@@ -17,23 +17,32 @@ var triangles = function(a,b,c) {
 $(document).ready(function() {
   $("form#triangle").submit(function(event) {
     $(".triangle").empty()
+    $(".error").empty()
 
     var a = parseInt($("input#a").val());
     var b = parseInt($("input#b").val());
     var c = parseInt($("input#c").val());
     var result = triangles(a,b,c);
 
-    $(".a").text(a);
-    $(".b").text(b);
-    $(".c").text(c);
-
-    if(!result) {
-      $(".triangle").text("physically impossible");
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+      $("#result").hide();
+      $("#error").show();
     } else {
-      $(".triangle").text(result);
+
+      $(".a").text(a);
+      $(".b").text(b);
+      $(".c").text(c);
+
+      if(!result) {
+        $(".triangle").text("physically impossible");
+      } else {
+        $(".triangle").text(result);
+      }
+      $("#error").hide();
+      $("#result").show();
+
     }
 
-    $("#result").show();
     event.preventDefault();
 
   });

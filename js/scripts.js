@@ -13,3 +13,28 @@ var triangles = function(a,b,c) {
   return "scalene";
   }
 };
+
+$(document).ready(function() {
+  $("form#triangle").submit(function(event) {
+    $(".triangle").empty()
+
+    var a = parseInt($("input#a").val());
+    var b = parseInt($("input#b").val());
+    var c = parseInt($("input#c").val());
+    var result = triangles(a,b,c);
+
+    $(".a").text(a);
+    $(".b").text(b);
+    $(".c").text(c);
+
+    if(!result) {
+      $(".triangle").text("physically impossible");
+    } else {
+      $(".triangle").text(result);
+    }
+
+    $("#result").show();
+    event.preventDefault();
+
+  });
+});

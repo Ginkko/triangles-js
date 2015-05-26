@@ -7,7 +7,7 @@ describe ('triangles', function() {
     expect(triangles(3,3,3)).to.equal("equilateral");
   });
 
-  it("will return scalene if the triangle is scalene", function () {
-    expect(triangles(2,2,3)).to.equal("scalene");
+  it("will return isosceles if the triangle is isosceles", function () {
+    expect(triangles(2,2,3)).to.equal("isosceles");
   });
 });

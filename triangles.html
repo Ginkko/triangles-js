@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>The Triangulizer 600!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Triangulizer 600!!</h1>
+      <form id="triangles">
+        <div class="form-group">
+          <label for="a">Enter side A:</label>
+          <input type="text" id="a" required>
+          <label for="b">Enter side B:</label>
+          <input type="text" id="b" required>
+          <label for="c">Enter side C:</label>
+          <input type="text" id="c" required>
+        </div>
+        <button name="submit" class="btn btn-info">Triangulize!</button>
+      </form>
+      <div id="result">
+        <br>
+        <p><span class="a"></span>, <span class="b"></span>, <span class="c"></span> makes a <span class="triangle"></span></p>
+      </div>
+    </div>
+  </body>
+</html>

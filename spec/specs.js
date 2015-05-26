@@ -10,4 +10,8 @@ describe ('triangles', function() {
   it("will return isosceles if the triangle is isosceles", function () {
     expect(triangles(2,2,3)).to.equal("isosceles");
   });
+
+   it("will return scalene if triangle is scalene", function() {
+     expect(triangles(2,3,4)).to.equal("scalene");
+   });
 });

@@ -6,7 +6,7 @@ var triangles = function(a,b,c) {
   if ( triangle[0] === triangle[1] && triangle[1] === triangle[2]) {
     return "equilateral";
   } else if ( triangle[0] === triangle[1] && triangle[2] !== triangle[1]) {
-    return "scalene";
+    return "isosceles";
   } else {
   return false;
   }
